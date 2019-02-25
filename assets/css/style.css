@@ -1,0 +1,329 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    /* flexing indication for the body */
+    display: flex;
+    flex-direction: column;
+
+    margin: 0px;
+}
+
+h1, article h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:20pt;
+}
+
+.HeadderWrapper {
+    /* Flexing properties for NOT to flex */
+    flex-shrink: 0;
+    /* Margin properties */
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 25px;
+    /* Position properties to make it a container */
+    position: relative;
+    height: 67.6px;
+    background-color: white;
+    min-width: 600px;
+}
+
+/* Second Headder wrapper to give different margin values */
+.HeadderWrapper2 {
+    /* Flexing properties for NOT to flex */
+    flex-shrink: 0;
+    /* Margin properties */
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 25px;
+    /* Position properties to make it a container */
+    position: relative;
+    height: 67.6px;
+    background-color: white;
+    min-width: 600px;
+}
+
+.MyName {
+    color: white;
+    background-color: #4aaaa5;
+    border: 15px solid #4aaaa5;
+    /* Reposition within its container */
+    position: absolute;
+    float: left;
+    margin: 0;
+    bottom: 0;
+}
+
+.LinksSet {
+    /* Reposition within its container */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    /* Reset "Y" origin value to align verticallay */
+    transform: translateY(-50%)
+
+}
+
+.Contact {
+    color: #777777;
+    /* Position within its container */
+    float: right;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    Text-decoration: none;
+
+}
+
+.Portfolio {
+    color: #777777;
+    /* Position within its container */
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
+    float: right;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    Margin-right: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    Text-decoration: none;
+}
+
+.About {
+    color: #777777;
+    /* Position within its container */
+    float: right;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    Margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    Text-decoration: none;
+}
+
+.BackGroundWrapper {
+    /* Flexing properties for it TO flex */
+    flex: 1 0 auto;
+    /* Manage overflow behavior */
+    overflow: auto;
+    /* Manage appearance */
+    border-top: 2px solid #999999;
+    background: url(../images/BackGround.png); 
+    background-repeat: repeat; 
+}
+
+
+.TextWrapper {
+    /* Set position, margin sizes and overflow beavior */
+    position: relative;
+    overflow: auto;    
+    margin-top:25px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+    min-width: 600px;
+
+    background-color: #fafafa;
+}
+
+.TextWrapper2 {
+    /* Set position, margin sizes and overflow beavior */
+    position: relative;
+    overflow: auto;margin-top:25px;
+    margin-bottom: 25px;
+    margin-left: 150px;
+    margin-right: 150px;
+    min-width: 600px;
+
+    background-color: #fafafa;
+
+}
+
+.AboutMe {
+    color: #4aaaa5;
+    border: 15px solid #fafafa;
+    /* Positioning and margin */
+    position: relative;
+    margin: 0;
+    Top: 0;
+}
+
+hr {
+    /* Positioning  */
+    margin-top: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    height:  0px; 
+
+    background-color: #999999;
+}
+
+.ProfPic {
+    /* Set position and margin sizes */
+    float:left;
+    width: 350px;
+    margin-top: 15px;
+    /* Keeping the recision from the text wrapper and 
+    the flow of adjacent text */
+    margin-right: 15px; 
+    margin-left: 15px; 
+    margin-bottom: 15px;
+    vertical-align: text-bottom;
+}
+
+.Text {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: #777777;
+    /* Keeping the recision from the text wrapper */
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    /* line text spacing */
+    line-height: 2;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.ContactBox {
+    /* Positioning of the container */
+    margin:15px;
+    margin-bottom:20px;
+}
+
+.ContactInfo, .CampoTexto, .CampoMensaje {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #777777;
+}
+
+.CampoTexto, .CampoMensaje {
+    margin-bottom: 15px;
+    width: 100%;
+    border-width:1px;
+    border-style: solid;
+    border-color: #c0c0c0;
+
+}
+
+/* Setting different properties for Message textbox */
+.CampoMensaje {
+    height: 200px;
+    margin-bottom: 20px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#Boton1 {
+    background-color: #4aaaa5;
+    border: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 8px;
+    width: 130px;
+}
+
+.PicContainer {
+    /* Positioning of the container */
+    overflow: auto;
+    margin: 15px;
+    position: relative;
+}
+
+.PicThumbnail {
+    /* Positioning and behavior of the Pic container */
+    position: relative;
+    float: left;
+    min-width: 150px;
+    width: 29.3333%;
+    padding-top: 30px;
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+
+.PictureBox {
+    /* Stretching the picture to the entirety of 
+    the Pic container */
+    width: 100%;
+}
+
+.PictureBox:active {
+    /* Setting behavior of the "on click event"
+    for the pictures. Showing images in resized 
+    form and bringing them to a higher Z level */
+    width: 64%;
+    position: fixed;
+    top: 0px;
+    right: 18%;
+    z-index: 2;
+
+}
+
+.PicBanner {
+    /* Positioning the Pic banner relative to the Pic 
+    container */
+    position: relative;
+    Background-color: #4aaaa5;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    text-align: center;
+    bottom: 65px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: block;
+
+}
+
+.Footer {
+    /* Flexing properties for NOT to flex */
+    flex-shrink: 0;
+    position: relative;
+    width: 100%;
+    /* bottom: 0; */
+    height: 40px;
+    background-color: #666666;
+    border-top: 4px solid #4aaaa5;
+} 
+
+.FootLocation {
+    width: 100px;
+    /* Positioning Footer text container */
+    position: absolute;
+    margin:0;
+    padding: 0;
+    /* Centering Footer text container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.FooterText {
+    /* Aligning text within the Footer text conatiner */
+    text-align: center;
+    /* bottom: 50px; */
+    font-size: 12px;
+    color: #c6ccc6;
+}
