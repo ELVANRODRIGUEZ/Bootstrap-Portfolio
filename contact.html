@@ -1,54 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>ELVAN PORTFOLIO</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Link to css file -->
-        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-        <!-- Link to javascript file (if any) -->
-        <script src="/assets/javascript/main.js"></script>
-    </head>
-    <body>
-        <!-- Defining 3 main parts of the Web Page body -->
 
-        <!-- Container for the headder to give margin recision -->
-        <header class="HeadderWrapper2">
-            <div>
-                <h1 class="MyName">Elvan López Rodríguez</h1>
-                <div class="LinksSet">
-                    <p class="Contact">Contact</p>
-                    <a class="Portfolio"  href="portfolio.html">Portfolio</a>
-                    <a class="About" href="index.html">About</a>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ELVAN PORTFOLIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Link to css file (with presedence).-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/contactStyle.css">
+</head>
+
+<body>
+    <!-- Two main containers to strech the first one to the  -->
+    <!-- bottom if the content does not force it. Flexbox  -->
+    <!-- technique. -->
+    <div class="container conMain">
+        <!-- Header row. -->
+        <div class="row headerRow justify-content-center align-items-end">
+            <!-- Two columns, one for the name and the other -->
+            <!-- for the navigation controls -->
+            <div Class="colname columns col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                <div class="name">
+                    <h1 class="myname">Elvan López Rodríguez</h1>
                 </div>
             </div>
-            <br>
-        </header>
-        <section class="BackGroundWrapper">
-            <!-- Container for to give margin recision -->
-            <div class="TextWrapper2">
-                <!-- Main content in the page   -->
-                <article>
-                    <h1 class="AboutMe">Contact</h1>
-                    <hr class ="DivLine1">
-                    <!-- Contact Box Form container -->
-                    <form class="ContactBox">
-                        <label class="ContactInfo">Name</label>
-                        <input class="CampoTexto" type="text" name="Nombre">
-                        <label class="ContactInfo">Email</label>
-                        <input class="CampoTexto" type="text" name="Nombre">
-                        <label class="ContactInfo">Message</label>
-                        <textarea class="CampoMensaje" name="Nombre"></textarea>
-                        <button id="Boton1">Submit</button>
-                    </form>
-                </article>
+            <div Class="columns col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                <nav class="linkset">
+                    <!-- The navigation buttos for all the site -->
+                    <!-- Container for the word buttons -->
+                    <p class="contact">Contact</p>
+                    <a class="portfolio" href="portfolio.html">Portfolio</a>
+                    <a class="about" href="index.html">About</a>
+                </nav>
             </div>
-        </section>
-        <!-- Container for the footer to give flexing parameters -->
-        <footer class="Footer">
-            <!-- Container for the footer text to facilitate its positioning -->
-            <p class="FootLocation FooterText">Copyright&#169;</p>
-        </footer>
-    </body>
+        </div>
+        <!-- Article row. -->
+        <div class="row articleRow  justify-content-center">
+            <!-- First column to stretch 10units long -->
+            <!-- to leave margins and then 12units to -->
+            <!-- fill the whole width at small screen -->
+            <!-- sizes. -->
+            <div Class="col1 col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="header2">Contact</h1>
+                <hr class="divLine1">
+            </div>
+            <!-- Second column goes beneath with the same -->
+            <!-- properties of the first one but will -->
+            <!-- contain a nested row for a particular -->
+            <!-- composition. -->
+            <div Class="col2 col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <!-- Columns for the input area. -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputName">Name</label>
+                                <input type="text" class="form-control" id="exampleInputName" placeholder="Enter name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputMessage">Message</label>
+                                <textarea type="text" class="form-control tres" id="exampleInputMessage"
+                                    placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer container. -->
+    <div class="container conFooter">
+        <div class="row footerRow">
+            <div class="col3 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <footer class="Footers">
+                    <!-- Container for the footer text to facilitate its positioning -->
+                    <p class="FootLocation FooterText">Copyright&#169;</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

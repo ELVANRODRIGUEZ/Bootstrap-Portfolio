@@ -1,0 +1,238 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    /* Flexbox technique to place the footer at the bottom. */
+    display:flex;
+    flex-direction:column;
+}
+
+.container {
+    /* Some attributes need to be marked as important */
+    /* in order to override the default ones. */
+    min-width: 100% !important;
+    margin: 0!important;
+    padding: 0!important;
+    background: url(../images/BackGround.png); 
+}
+
+.conMain {
+    /* Allow to flex. */
+    flex-grow:1 !important;
+}
+
+.conFooter {
+    /* Not allowing to flex. */
+    flex-grow:0 !important;
+}
+
+.row {
+    /* Override row margin defaults. */
+    margin:0;
+}
+
+.headerRow {
+    /* Recission from the top */
+    padding-top:30px;
+    background-color: white;
+}
+
+.articleRow {
+    border-top: 1px solid #777777;
+    /* Recission from the top and bottom */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.columns {
+    /* Override column margin defaults. */
+    padding:0px;
+    
+}
+
+.col2 {
+    background-color: white;
+    /* Recission from the article limit space. */
+    padding: 15px;
+}
+
+.colname {
+    background-color:#4aaaa5;
+    animation-name: name;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size:20pt !important;
+    margin:0px;
+}
+
+.name {
+    /* Flexbox technique to align content. */
+    display:flex;
+    min-width:346px;
+    height:61.2px;
+    align-items:center;
+    padding-left:15px;
+
+}
+.myname {
+    color:#ffffff;
+}
+
+.linkset {
+    /* Flexbox technique to align content. */
+    display:flex;
+    justify-content: flex-end;
+    min-width:346px;
+    /* align-content: flex-start; */
+    align-items: center;
+    height:61.2px;
+}
+
+.contact, .portfolio, .about {
+    /* For the links and general text */
+    font-size:12pt;
+    /* Footer colors for background and font */
+    color: #777777;
+    margin:0;
+    padding:0;
+    padding-right: 5px;
+    padding-left: 5px;
+    display:inline-block;
+}
+
+.portfolio {
+    
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
+}
+
+.header2 {
+    color: #4aaaa5;
+    animation-name: about;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+}
+
+.PicThumbnail:active {
+    /* Setting behavior of the "on click event"
+    for the pictures. Showing images in resized 
+    form and bringing them to a higher Z level */
+    height: 100%;
+    /* display: block; */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    /* bottom: 0px; */
+    padding: 25%;
+    padding-top: 0%;
+    /* margin: 0 auto; */
+    z-index: 2;
+    background-color: black;
+    transition: .75s;
+    /* padding-bottom: 100%; */
+}
+
+.PictureBox {
+    /* Stretching the picture to the entirety of 
+    the Pic container */
+    width: 100%;
+
+}
+
+.PicBanner {
+    /* Positioning the Pic banner relative to the Pic 
+    container */
+    position: relative;
+    Background-color: #4aaaa5;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    text-align: center;
+    bottom: 65px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: block;
+    animation-name: banner;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+}
+
+.Footers {
+    /* Flexbox technique to align content. */
+    display: flex;
+    min-height: 40px;
+    background-color: #666666;
+    border-top: 4px solid  #4aaaa5;
+    justify-content: center;
+    align-items: center;
+}
+
+.FooterLocation {
+    margin:0;
+    padding:0;
+}
+
+.FooterText {
+    color:#c6ccc6;
+    font-size:9pt;
+    margin:0;
+}
+
+/* Keyframs for color changing */
+@keyframes name {
+    25% {background-color:#4aaaa5;}
+    50% {background-color:#4a74aa;}
+    25% {background-color:#4aaaa5;}
+}
+
+@keyframes about {
+    25% {color:#4aaaa5;}
+    50% {color:#4a74aa;}
+    25% {color:#4aaaa5;}
+  }
+
+  
+@keyframes banner {
+    25% {background-color:#4aaaa5;}
+    50% {background-color:#4a74aa;}
+    25% {background-color:#4aaaa5;}
+  }
+
+/* Mediaquery to change Picture on active behavior, */
+/* heder row top recission at small screen sizes and */
+/* navigation buttons justification. */
+@media screen and (max-width: 980px) {
+    .PicThumbnail:active {
+        padding: 10%;
+        padding-top: 5%;
+     
+    } 
+    
+    .headerRow {
+        margin-top: 0px;
+    }
+
+    .linkset {
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+}
+
+/* Mediaquery to change Picture on active behavior, */
+/* and containers min width to stop infinite shrinking. */
+@media screen and (max-width: 576px) {
+    .PicThumbnail:active {
+        padding: 5%;
+        padding-top: 5%;
+     
+    } 
+    .container {
+        min-width:520px !important;
+    }
+    
+}
