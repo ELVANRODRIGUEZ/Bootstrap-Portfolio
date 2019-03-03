@@ -43,6 +43,11 @@ html, body{
     padding-bottom: 30px;
 }
 
+.columns {
+    /* Override column margin defaults. */
+    padding:0px;
+}
+
 .col1 {
     background-color: white;
     /* Recission from the article limit space. */
